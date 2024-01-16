@@ -36,42 +36,48 @@
   2. 85.4% of the loans approved was Fully Paid and a 14.6% of loans was defaulted.
   3. Around 22% of the total loan are taken by people who had 10+ Years of employee length, indicating that people tend to take loans more on a later stage of life.
   4. The loan issued increases drastically year by year, 2011 has over 50% of the all issued loans. This can be due to several reasons.
-	- Life Getting Tougher Over Years
-        - Recession in 2011
-        - LC became popular over years
-  5. **dti vs loan_status** --> 
-        - From dti vs Loan Status analysis, binned in 2 different methods Equal Width Binning and Quantile Binning show almost similar patterns, that as the dti increases chances of defaulting also increases
-  6. **funded_to_income vs loan_status** -->
-	- Similar analysis was made from the relationship btw funded_to_income vs loan_status, binned in 2 different methods Equal Width Binning and Quantile Binning.
-	- From the analysis of 2 binning methods one can conclude that as the funded_to_income increases chances of defaulting also increases
-	- From the plot generated using Equal Width Binning for funded_to_income vs loan_status, its clear that almost 31.1% of loans defaulted whose funded_to_income ratio was above 0.52
-	- Loan Status vs Funded To Income Ratio, the Box plot gives a slight indication that most of the defaulters fall on a high f_to_i ratio value, whereas the majority of the Fully Paid is on the lower ratio end
+		- Life Getting Tougher Over Years
+		- Recession in 2011
+		- LC became popular over years
+  6. dti vs loan_status --> 
+	    - From dti vs Loan Status analysis, binned in 2 different methods Equal Width Binning and Quantile Binning show almost similar patterns, that as the dti increases chances of defaulting also increases
+  7. funded_to_income vs loan_status -->
+		- Similar analysis was made from the relationship btw funded_to_income vs loan_status, binned in 2 different methods Equal Width Binning and Quantile Binning.
+		- From the analysis of 2 binning methods one can conclude that as the funded_to_income increases chances of defaulting also increases
+		- From the plot generated using Equal Width Binning for funded_to_income vs loan_status, its clear that almost 31.1% of loans defaulted whose funded_to_income ratio was above 0.52
+		- Loan Status vs Funded To Income Ratio, the Box plot gives a slight indication that most of the defaulters fall on a high f_to_i ratio value, whereas the majority of the Fully Paid is on the lower ratio end
 
 - Results from Bivariate Analysis:
   
-  1. **term vs loan_status** -->
-     People opted for longer duration installments i.e. 60 months are going to default more, than people opted shorter duration i.e. 36 months
-     From Term vs Loan Status Analysis, its clear that out of 8722 who opted for 60 Months as term 2230 has defaulted, means around 25.6 %, where as for those opted 36 Months only 2966 out of 
-     26953 deafulted, thats just 11%
-     
-  2. **purpose vs loan_status** -->
-     From Purpose vs Loan_status analysis, its clear that 27.8% of loans taken for the purpose of small_business end up as defaulters. This might be because of the failure of the business.
-     Another insight is that for loans taken under 60 months as term and purpose as eductional and small_business shows very high default rates of about 42%.
-     
-  3. **dti vs loan_status** -->
-     From dti vs Loan Status analysis, binned in 2 different methods Equal Width Binning and Quantile Binning shows almost similar patterns, that as the dti increases chances of defaulting also 
-     increases.
-     
-  4. **funded_to_income vs loan_status** -->
-     Similar analysis was made from realtionship btw funded_to_income vs loan_status, binned in 2 different methods Equal Width Binning and Quantile Binning.
-     From analysis of 2 binning method one can come to a conclusion that as the funded_to_income increases chances of defaulting also increases
-     From plot generated using Equal Width Binning for funded_to_income vs loan_status, its clear that almost 31.1% of loans got defaulted whose funded_to_income ratio was above 0.52.
-     
-  5. **difference of funded_amnt and funded_amnt_inv vs loan_status** -->
-     Analysising realtionship btw the difference of funded_amnt and funded_amnt_inv, and Percentage of defaulters in each segment, binned using Equal Width Binning technique shows very 
-     interseting analysis.
-     So if the difference btw approved amount from LC and amount funded by investors increases, means the tendency for that loan to deafult is very high
-     For loans which had a difference in approved amount from LC and amount funded by investors greater than 21.6K, around 46.5% of such loans was defaulted
+  1. Loan Status vs Interest Rate
+		- Loan Status vs Interest Rate Box plot gives a strong indication that most of the defaulters tend to fall on higher interest rates when compared to non-defaulters.  
+		- The Percentage of Defaulters Under Each Category WRT Grade bar plot gives a clear conclusion/insight that the higher the grade at which the loans are taken, the more the chance of defaulting. 
+		- Around 36% of the loan takers under G category has defaulted
+		- Grade/Sub Grade is linked to Interest rate, The Higher the grade higher the interest rate
+
+  2. Term vs loan_status
+		- People who opted for longer duration installments i.e. 60 months are going to default more, than people who opted for shorter duration i.e. 36 months
+		- From Term vs Loan Status Analysis, it’s clear that out of 8722 who opted for 60 Months as term 2230 has defaulted, which means around 25.6 %, whereas, for those who opted 36 Months only 2966 out of 26953 defaulted, that’s just 11%
+
+  3. Purpose vs loan_status
+		- From Purpose vs Loan_status analysis, it’s clear that 27.8% of loans taken for small_business end up as defaulters. This might be because of the failure of the business.
+		- Another insight is that loans taken under 60 months as term and purpose as educational and small_business show very high default rates of about 42%
+
+  4. Annual Income vs Loans Defaulted In that segment in Percentage
+		- From Annual Income vs Loan Status analysis, it was found that as annual_inc decreases chances of defaulting increases
+
+  5. Funded Amount By Investors vs Loans Defaulted In that segment in Percentage
+		- From Funded_amnt_inv vs loan_status analysis, it was found that as the funded amount by investors increases chances of defaulting increases
+
+  6. Record of Bankruptcies vs Loans Defaulted In that segment in Percentage
+		- pub_rec_bankruptcies vs percentage of defaulters shows an indication that people having previous records of bankruptcies tend to repeat that in the future.
+		- Around 40% of those who take loans with a history of bankruptcies of 2 tend to default. 
+
+  7. Difference of Funded Amount and Funded amount by investors vs Loans Defaulted In that segment in Percentage
+		- Analyzing the relationship btw the difference of funded_amnt and funded_amnt_inv, and the Percentage of defaulters in each segment, binned using the Equal Width Binning technique shows a very interesting analysis.
+		- So if the difference btw the approved amount from LC and the amount funded by investors increases, means the tendency for that loan to default is very high
+		- For loans that had a difference in approved amount from LC and amount funded by investors greater than 21.6K, around 46.5% of such loans were defaulted
+
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -94,7 +100,7 @@ This project was inspired by UpGrad IITB Programme as a case study for the Machi
 <!-- This project is open source and available under the [... License](). -->
 <!-- You don't have to include all sections - just the one's relevant to your project -->
 
-##Contributors:
+## Contributors:
 
 * [Labeeb Ali Koleth](https://github.com/LabeebAli97)
 * [Akankshya Abhilipsa](https://github.com/Aabhilipsa)
